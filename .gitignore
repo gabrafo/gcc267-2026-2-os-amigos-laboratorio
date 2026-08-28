@@ -1,0 +1,13 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# Ambiente local
+.env
+.env.local
