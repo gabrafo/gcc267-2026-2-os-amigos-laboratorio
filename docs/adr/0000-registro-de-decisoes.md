@@ -21,7 +21,8 @@ estratégia de consistência. Não se registram escolhas de nomenclatura, format
 lint) ou bibliotecas de fácil substituição.
 
 **Formato.** Arquivo `docs/adr/NNNN-titulo-em-kebab-case.md`, com numeração sequencial e as seções
-Contexto, Decisão e Consequências.
+Contexto, Decisão e Consequências. O modelo está em
+[`docs/adr/template/`](template/template.md).
 
 **Ciclo.** Quem propõe abre um PR com o ADR em status Proposta. A discussão ocorre na revisão do PR.
 Com o aval da equipe, o status passa a Aceita. ADR aceito não é editado: uma mudança de decisão gera

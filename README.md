@@ -14,6 +14,7 @@ Universidade Federal de Lavras (UFLA).
 | [docs/equipe.md](docs/equipe.md) | Integrantes, papéis e organização da equipe |
 | [docs/visao-produto.md](docs/visao-produto.md) | Problema, público, contextos delimitados e a transação que os atravessa |
 | [docs/adr/](docs/adr/) | Registros de decisão de arquitetura |
+| [docs/adr/template/](docs/adr/template/template.md) | Modelo para novos ADRs |
 
 ### Decisões registradas
 
