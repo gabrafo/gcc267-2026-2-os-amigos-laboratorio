@@ -15,12 +15,14 @@ Universidade Federal de Lavras (UFLA).
 | [docs/visao-produto.md](docs/visao-produto.md) | Problema, público, contextos delimitados e a transação que os atravessa |
 | [docs/adr/](docs/adr/) | Registros de decisão de arquitetura |
 | [docs/adr/template/](docs/adr/template/template.md) | Modelo para novos ADRs |
+| [docs/spec/](docs/spec/README.md) | Especificações de funcionalidade e o processo de SDD |
 
 ### Decisões registradas
 
 - [ADR 0000](docs/adr/0000-registro-de-decisoes.md) — Registrar decisões de arquitetura como ADRs
 - [ADR 0001](docs/adr/0001-stack-tecnologica.md) — TypeScript + React no front-end, Java + Spring Boot no back-end
 - [ADR 0002](docs/adr/0002-ddd-no-backend.md) — Estruturar o back-end com Domain-Driven Design
+- [ADR 0003](docs/adr/0003-spec-driven-development.md) — Adotar Spec Driven Development
 
 ## Estrutura
 
