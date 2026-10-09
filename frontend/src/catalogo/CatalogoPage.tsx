@@ -58,7 +58,7 @@ export default function CatalogoPage() {
     setErro('')
     try {
       const atualizado = await mudarEstado(recurso.id, acao)
-      setRecursos(recursos.map((r) => (r.id === atualizado.id ? atualizado : r)))
+      setRecursos((atuais) => atuais.map((r) => (r.id === atualizado.id ? atualizado : r)))
     } catch (e) {
       setErro(mensagemDe(e))
     }
