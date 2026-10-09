@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import CatalogoPage from './catalogo/CatalogoPage'
 
 type StatusApi = 'verificando' | 'online' | 'offline'
 
@@ -21,7 +22,7 @@ function App() {
       </header>
 
       <main className="conteudo">
-        <p>Em breve: catálogo de recursos e reservas.</p>
+        <CatalogoPage />
       </main>
     </>
   )

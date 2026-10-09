@@ -23,3 +23,47 @@
 .conteudo {
   padding: 24px;
 }
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.formulario input[type='number'] {
+  width: 80px;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 6px 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.erro {
+  color: #dc2626;
+  margin-bottom: 16px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela th,
+.tabela td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.acoes {
+  display: flex;
+  gap: 4px;
+}
