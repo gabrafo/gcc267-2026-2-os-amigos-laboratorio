@@ -7,6 +7,19 @@
   margin: 0 0 4px;
 }
 
+.status {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.status-online {
+  color: #16a34a;
+}
+
+.status-offline {
+  color: #dc2626;
+}
+
 .conteudo {
   padding: 24px;
 }
