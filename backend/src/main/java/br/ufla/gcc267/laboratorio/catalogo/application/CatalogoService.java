@@ -2,6 +2,7 @@ package br.ufla.gcc267.laboratorio.catalogo.application;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.function.Consumer;
 
 import org.springframework.stereotype.Service;
 
@@ -41,23 +42,21 @@ public class CatalogoService {
         return repositorio.buscarPorId(id).orElseThrow(() -> new RecursoNaoEncontradoException(id));
     }
 
-    public synchronized Recurso enviarParaManutencao(UUID id) {
-        Recurso recurso = buscar(id);
-        recurso.enviarParaManutencao();
-        repositorio.salvar(recurso);
-        return recurso;
+    public Recurso enviarParaManutencao(UUID id) {
+        return alterarEstado(id, Recurso::enviarParaManutencao);
     }
 
-    public synchronized Recurso liberar(UUID id) {
-        Recurso recurso = buscar(id);
-        recurso.liberar();
-        repositorio.salvar(recurso);
-        return recurso;
+    public Recurso liberar(UUID id) {
+        return alterarEstado(id, Recurso::liberar);
     }
 
-    public synchronized Recurso darBaixa(UUID id) {
+    public Recurso darBaixa(UUID id) {
+        return alterarEstado(id, Recurso::darBaixa);
+    }
+
+    private synchronized Recurso alterarEstado(UUID id, Consumer<Recurso> transicao) {
         Recurso recurso = buscar(id);
-        recurso.darBaixa();
+        transicao.accept(recurso);
         repositorio.salvar(recurso);
         return recurso;
     }
