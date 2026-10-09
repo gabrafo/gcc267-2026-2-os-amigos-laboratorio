@@ -60,7 +60,9 @@ class RecursoControllerTest {
                 {"nome": "Sala X", "tipo": "SALA", "localizacao": "DCC", "capacidade": 30}
                 """;
 
-        assertThat(cadastrar(json)).hasStatus(HttpStatus.BAD_REQUEST);
+        assertThat(cadastrar(json))
+                .hasStatus(HttpStatus.BAD_REQUEST)
+                .bodyJson().extractingPath("$.mensagem").asString().contains("tipo");
     }
 
     @Test
@@ -122,6 +124,7 @@ class RecursoControllerTest {
         Recurso recurso = catalogo.cadastrar("Bancada 7", TipoRecurso.BANCADA, "DCC", 2);
 
         assertThat(mvc.get().uri(URL + "/{id}/elegibilidade?perfil=ALUNO", recurso.getId()))
-                .hasStatus(HttpStatus.BAD_REQUEST);
+                .hasStatus(HttpStatus.BAD_REQUEST)
+                .bodyJson().extractingPath("$.mensagem").asString().contains("perfil");
     }
 }
