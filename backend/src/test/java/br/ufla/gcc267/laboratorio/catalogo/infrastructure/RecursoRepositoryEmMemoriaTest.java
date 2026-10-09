@@ -23,6 +23,16 @@ class RecursoRepositoryEmMemoriaTest {
     }
 
     @Test
+    void nomeComAcentoFicaNaOrdemAlfabetica() {
+        repositorio.salvar(Recurso.cadastrar("Zoologia", TipoRecurso.LABORATORIO, "DBI", 30));
+        repositorio.salvar(Recurso.cadastrar("Óptica", TipoRecurso.LABORATORIO, "DFI", 30));
+
+        assertThat(repositorio.listarTodos())
+                .extracting(Recurso::getNome)
+                .containsExactly("Óptica", "Zoologia");
+    }
+
+    @Test
     void encontraNomeSemDiferenciarMaiusculas() {
         repositorio.salvar(Recurso.cadastrar("Lab Redes", TipoRecurso.LABORATORIO, "DCC", 30));
 
