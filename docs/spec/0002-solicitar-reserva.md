@@ -1,6 +1,6 @@
 # SPEC 0002 — Solicitar reserva
 
-- **Status:** Rascunho
+- **Status:** Aprovada
 - **Data:** 2026-10-09
 - **Autores:** Hugo Pontello
 - **Contextos afetados:** Reserva, Catálogo (consulta)
