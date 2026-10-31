@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import CatalogoPage from './catalogo/CatalogoPage'
+import ReservaPage from './reserva/ReservaPage'
 
 type StatusApi = 'verificando' | 'online' | 'offline'
 
@@ -23,6 +24,7 @@ function App() {
 
       <main className="conteudo">
         <CatalogoPage />
+        <ReservaPage />
       </main>
     </>
   )
