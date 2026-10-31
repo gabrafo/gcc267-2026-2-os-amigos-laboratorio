@@ -67,3 +67,27 @@ button {
   display: flex;
   gap: 4px;
 }
+
+.conteudo section + section {
+  margin-top: 40px;
+}
+
+h3 {
+  color: var(--text-h);
+  font-weight: 600;
+  margin: 24px 0 8px;
+}
+
+.aviso {
+  color: #16a34a;
+  margin-bottom: 16px;
+}
+
+.dica {
+  margin-bottom: 8px;
+}
+
+.cancelada {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
